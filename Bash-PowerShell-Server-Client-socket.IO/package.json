@@ -7,16 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/IRONKAGE/Socket.IO.git"
-  },
   "author": "IRONKAGE",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/IRONKAGE/Socket.IO/issues"
-  },
-  "homepage": "https://github.com/IRONKAGE/Socket.IO#readme",
+  "homepage": "https://github.com/IRONKAGE",
   "dependencies": {
     "socket.io": "^2.3.0"
   }
