@@ -6,16 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/IRONKAGE/crud-users.git"
-  },
   "author": "IRONKAGE",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/IRONKAGE/crud-users/issues"
-  },
-  "homepage": "https://github.com/IRONKAGE/crud-users#readme",
+  "homepage": "https://github.com/IRONKAGE",
   "dependencies": {
     "async": "^3.1.0",
     "body-parser": "^1.19.0",
