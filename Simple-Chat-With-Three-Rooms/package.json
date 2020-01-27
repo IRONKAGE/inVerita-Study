@@ -2,10 +2,6 @@
   "name": "chatik",
   "description": "room chat with socket.io",
   "version": "1.0.0",
-  "dependencies": {
-    "express": "^4.17.1",
-    "socket.io": "^2.3.0"
-  },
   "scripts": {
     "start": "node server.js"
   },
@@ -20,5 +16,9 @@
   ],
   "author": "IRONKAGE",
   "license": "ISC",
-  "homepage": "https://github.com/IRONKAGE"
+  "homepage": "https://github.com/IRONKAGE",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
 }
