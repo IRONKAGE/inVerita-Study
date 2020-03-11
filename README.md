@@ -15,7 +15,7 @@
 
 [Number Loop In Bash PowerShell From Server To Client](https://github.com/IRONKAGE/NumberLoop-In-Bash-PowerShell-FromServer2Client)
 
-1️⃣  [Users-BackEnd-Express-Mongoose-Swagger](https://github.com/IRONKAGE/inVeritaStudy/tree/master/users-BackEnd-Express-Mongoose-Swagger)
+1️⃣  [Users-BackEnd-Express-Mongoose-Swagger](https://github.com/IRONKAGE/inVerita-Study/tree/master/Users-BackEnd-Express-Mongoose-Swagger)
 ☢ Створення серверу з використанням (Express, MongoDB, Swagger, NoDemon, Parsers, aSync)
 
 2️⃣  [Bash-PowerShell-Server-Client-socket.IO](https://github.com/IRONKAGE/inVeritaStudy/tree/master/Bash-PowerShell-Server-Client-socket.IO)
