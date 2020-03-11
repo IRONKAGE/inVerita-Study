@@ -26,3 +26,5 @@
 
 4️⃣ [NumberLoop-In-Bash-PowerShell-FromServer2Client](https://github.com/IRONKAGE/inVeritaStudy/tree/master/NumberLoop-In-Bash-PowerShell-FromServer2Client)
 ☢ Cервер-Клієнт для терміналу, де при підключенню клієнт отримує цифри із сервера у реальному часі з використанням (socket.IO)
+
+[](https://github.com/IRONKAGE/inVerita-Study/tree/master/Test%26Try)
