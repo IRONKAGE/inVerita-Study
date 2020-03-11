@@ -13,6 +13,8 @@
 
 [User JWT Autorization CMD](https://github.com/IRONKAGE/User-JWT-Autorization-CMD)
 
+[Number Loop In Bash PowerShell From Server To Client](https://github.com/IRONKAGE/NumberLoop-In-Bash-PowerShell-FromServer2Client)
+
 1️⃣  [Users-BackEnd-Express-Mongoose-Swagger](https://github.com/IRONKAGE/inVeritaStudy/tree/master/users-BackEnd-Express-Mongoose-Swagger)
 ☢ Створення серверу з використанням (Express, MongoDB, Swagger, NoDemon, Parsers, aSync)
 
