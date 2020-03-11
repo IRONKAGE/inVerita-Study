@@ -5,6 +5,8 @@
 
 2️⃣ [Socket.IO](https://github.com/IRONKAGE/Socket.IO) [22-24.01.2020]
 
+[Chatik on Socket.IO](https://github.com/IRONKAGE/chatik-on-socket.IO)
+
 
 1️⃣  [Users-BackEnd-Express-Mongoose-Swagger](https://github.com/IRONKAGE/inVeritaStudy/tree/master/users-BackEnd-Express-Mongoose-Swagger)
 ☢ Створення серверу з використанням (Express, MongoDB, Swagger, NoDemon, Parsers, aSync)
