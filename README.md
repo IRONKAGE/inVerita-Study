@@ -9,6 +9,8 @@
 
 [Users JWT Authorization Express](https://github.com/IRONKAGE/Users-JWT-Authorization-Express)
 
+[Users JWT Authorization Socket.IO](https://github.com/IRONKAGE/Users-JWT-Authorization-socket.IO)
+
 
 1️⃣  [Users-BackEnd-Express-Mongoose-Swagger](https://github.com/IRONKAGE/inVeritaStudy/tree/master/users-BackEnd-Express-Mongoose-Swagger)
 ☢ Створення серверу з використанням (Express, MongoDB, Swagger, NoDemon, Parsers, aSync)
