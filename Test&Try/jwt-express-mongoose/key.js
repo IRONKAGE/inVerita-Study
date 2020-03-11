@@ -1,0 +1,1 @@
+module.exports={tokenKey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6Ik9sZWgiLCJpYXQiOjE1MTYyMzkwMjJ9.B13B4SKfXpuer8lWmOMoKamz0PvAEOfarLlCXHThUog"}

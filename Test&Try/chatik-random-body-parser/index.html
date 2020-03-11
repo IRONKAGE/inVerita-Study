@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.socket.io/socket.io-2.1.1.js"></script>
+    <script>
+    
+    $(function () {
+        var socket = io();
+
+        /*
+        * On submit of form with id 'entername' client sends entered username to server.
+        * After sending div-Container loginDiv will be hidden and messageDiv will be shown.
+        * And last: set value of usernameinput to ''.
+        * */
+        $('#enterName').submit(function () {
+            //console.log($('#userNameInput').val());
+            socket.emit('user login',$('#userNameInput').val());
+            $('#loginDiv').hide();
+            $('#messageDiv').show();
+            $('#userNameInput').val('');
+            return false;
+        });
+    });
+    </script>
+</head>
+<body>
+    <p id="displayNum"></p>
+</body>
+</html>

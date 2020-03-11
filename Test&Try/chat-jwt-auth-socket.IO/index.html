@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="node_modules/socket.io-client/dist/socket.io.js"></script>
+<script>
+    // You should add auth_token to the query when connecting
+    // Replace THE_JWT_TOKEN with the valid one
+    var socket = io('http://localhost:9000', {query: 'auth_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl9hZGRyZXNzIjoiMTkyLjE2OC4xLjEifQ.CU8DK8ECIyPxQjidgBUX7pG_6ATupNAx8oblhtoAL6VwzLyH1rJU5UmJnpWTC0ssReBB7t0m9cYJC7OjH-IbgnYNdyMYAzCLqFkmt9iBBEDbHRYaDRAggjvUDXa4BTWHB49wEv_aEEw30oH17m6s9dgFemwnajoCKp3yx7KThsui6t4xwshVjUEHdvGyRhq8SrCSNvkSV00wDM9AzG5xEPw0OjrSXrrRBFny9JuhVI5gjZ6PC5Wf2ldWsTD-OWTugSZnt8oejCkHOVEKA7G_-AEIXANyZSYJBAXdmdrXmW-dVGjDr0_lQwL2L0hw5ac4P9Sp77oUsWJUXLBIkqPijg'});
+    // Connection failed
+    socket.on('error', function(err) {
+        throw new Error(err);
+    });
+    // Connection succeeded
+    socket.on('success', function(data) {
+        console.log(data.message);
+        console.log('user info: ' + 'name: ' + data.user.name +', email: ' + data.user.email);
+        console.log('logged in: ' + data.user.logged_in)
+    })
+</script>
+</body>
+</html>

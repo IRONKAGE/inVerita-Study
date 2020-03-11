@@ -1,0 +1,38 @@
+{
+  "name": "socket_status",
+  "version": "2.0.0",
+  "description": "For Server commands",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IRONKAGE/Socket.IO.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IRONKAGE/Socket.IO/issues"
+  },
+  "homepage": "https://github.com/IRONKAGE/Socket.IO#readme",
+  "dependencies": {
+    "@feathersjs/authentication": "^4.5.1",
+    "express": "^4.17.1",
+    "io": "^1.0.0",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^3.2.1",
+    "koa-passport": "^4.1.3",
+    "koa-router": "^8.0.6",
+    "koa-static": "^5.0.0",
+    "mongoose": "^5.8.10",
+    "nodemon": "^2.0.2",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "socket.io": "^2.3.0",
+    "socketio-jwt": "^4.5.0",
+    "socketio-jwt-auth": "^0.1.0"
+  }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script>
+		var socket = io.connect('http://localhost:15000');
+
+		// З'єднання
+		socket.on('connect', () => {
+			socket.emit('adduser', prompt("Як тебе величати?"));
+		});
+
+		// Оновлення чату
+		socket.on('updatechat', (username, data) => {
+			$('#conversation').append('<b>'+username + ':</b> ' + data + '<br>');
+		});
+
+		// Оновлення кімнати
+		socket.on('updaterooms', (rooms, current_room) => {
+			$('#rooms').empty();
+			$.each(rooms, (key, value) => {
+				if(value == current_room){
+					$('#rooms').append('<div>' + value + '</div>');
+				}
+				else {
+					$('#rooms').append('<div><a href="#" onclick="switchRoom(\''+value+'\')">' + value + '</a></div>');
+				}
+			});
+		});
+
+		function switchRoom(room){
+			socket.emit('switchRoom', room);
+		}
+		
+		// Оновлення сторінки
+		$(() => {
+			$('#datasend').click( () => {
+				var message = $('#data').val();
+				$('#data').val('');
+				socket.emit('sendchat', message);
+			});
+
+			$('#data').keypress((e) => {
+				if(e.which == 13) {
+					$(this).blur();
+					$('#datasend').focus().click();
+				}
+			});
+		});
+
+	</script>
+	<div style="
+		float: left;
+		border-right: 1px solid black;
+		padding: 10px;
+		overflow: scroll-y;">
+		<b>Кімнати</b>
+		<div id="rooms"></div>
+	</div>
+	<div style="
+		float:left;
+		overflow: scroll-y;
+		padding: 10px;">
+		<div id="conversation"></div>
+		<input id="data"/>
+		<input type="button" id="datasend" value="Надіслати" />
+	</div>
+
+</body>
+</html>

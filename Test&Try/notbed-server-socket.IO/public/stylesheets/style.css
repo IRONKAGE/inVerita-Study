@@ -1,0 +1,32 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#caja{
+  border-style: solid;
+  min-height: 150px;
+  max-width: 300px;
+}
+#messages{
+  min-width: 300px;
+  position: relative;
+}
+#m{
+  border-top: groove;
+  padding: 10px;
+}
+#form{
+  min-width: 300px;
+  position: relative;
+}
+#texto{
+  min-width: 200px;
+}
+#but{
+  min-width: 95px;
+}

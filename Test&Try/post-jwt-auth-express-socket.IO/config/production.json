@@ -1,0 +1,5 @@
+{
+  "host": "https://evaluation-ovdii-api.herokuapp.com",
+  "port": "PORT",
+  "mongodb": "MONGODB_URI"
+}

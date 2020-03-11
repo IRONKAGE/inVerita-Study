@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JWT Авторизація</title>
+</head>
+<body>
+    <hr />
+    <div class="container" id="main-container"></div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io('http://localhost:5000');
+
+        function getProfileTemplate(profile) {
+            return `
+                <div>
+                    <<h1>Hello ${profile.firstName}!</h1>
+
+                    <p>Ви залогувались!</p>
+
+                    <div class="form-group">
+                        <button id="logout" class="btn btn-primary">Розлогувався</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function profileController() {
+            document.getElementById('logout')
+                .addEventListener('click', (e) => {
+                    e.preventDefault();
+                    socket.emit('user.logout');
+                    delete localStorage.token;
+                    getRoute();
+                });
+        }
+
+        function getCreateAccountTemplate() {
+            return `
+                <form id="create-account-form">
+                    <h1>Створити обліковий запис</h1>
+
+                    <div class="form-group">
+                        <label>Ім'я</label>
+                        <input type="firstName" class="form-control" />
+                    </div>>
+
+                    <div>
+                        <label>Прізвище</label>
+                        <input id="lastName" class="form-control" />
+                    </div>
+
+                    <div>
+                        <label>Пошта</label>
+                        <input id="email" type="email" class="form-control" />
+                    </div>
+
+                    <div>
+                        <label>Пароль</label>
+                        <input id="password" type="password" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <button class="btn-primary">Створити запис</button>
+                        &nbsp; or &nbsp;
+                        <a href="#/" class="btn btn-default">Логін</a>
+                    </div>
+
+                    <div id="messages"></div>
+                </form>
+            `;
+        }
+
+        function createAccountController() {
+            document.getElementById('create-account-form')
+                .addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    var user = {
+                        email: document.getElementById('email').value,
+                        password: document.getElementById('password').value,
+                        firstName: document.getElementById('firstName').value,
+                        lastName: document.getElementById('lastName').value
+                    };
+
+                    socket.emit('user.create', user);
+                });
+        }
+
+        function getLoginTemplate() {
+            return `
+                <form id="login-form">
+                    <h1>Логін</h1>
+
+                    <div class="form-group">
+                        <label>Пошта</label>
+                        <input id="email" type="email" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Пароль</label>
+                        <input id="password" type="password" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <button class="btn btn-primary">Логін</button>
+                        &nbsp; or &nbsp;
+                        <a href="#/create-account" class="btn btn-default">Створити обліковий запис</a>
+                    </div>
+
+                    <div id="messages"></div>
+                </form>
+            `;
+        }
+
+        function loginController() {
+            document.getElementById('login-form')
+                .addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    var user = {
+                        email: document.getElementById('email').value,
+                        password: document.getElementById('password').value
+                    };
+
+                    socket.emit('user.login', user);
+                });
+        }
+
+        function renderTemplate(tpl) {
+            document.getElementById('main-container').innerHTML = tpl;
+        }
+
+        function userLoggedIn(data) {
+            localStorage.token = data.token;
+            renderTemplate(getProfileTemplate(data.profile));
+            profileController(data);
+        }
+
+        function getRoute() {
+            if (document.location.hash === '#/create-account') {
+                renderTemplate(getCreateAccountTemplate());
+                createAccountController();
+                return;
+            }
+
+            renderTemplate(getLoginTemplate());
+            loginController();
+        }
+
+        function showError(data) {
+            alert(data.message)
+        }
+
+        (function() {
+            socket.on('user.create.error', showError);
+            socket.on('user.get.success', userLoggedIn);
+            socket.on('user.login.error', showError);
+
+            window.addEventListener('hashchange', getRoute);
+            getRoute();
+
+            if (localStorage.token) {
+                socket.emit('user.get', localStorage.token);
+            }
+        }());
+    </script>
+</body>
+</html>
