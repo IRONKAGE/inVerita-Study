@@ -7,6 +7,8 @@
 
 [Chatik on Socket.IO](https://github.com/IRONKAGE/chatik-on-socket.IO)
 
+[Users JWT Authorization Express](https://github.com/IRONKAGE/Users-JWT-Authorization-Express)
+
 
 1️⃣  [Users-BackEnd-Express-Mongoose-Swagger](https://github.com/IRONKAGE/inVeritaStudy/tree/master/users-BackEnd-Express-Mongoose-Swagger)
 ☢ Створення серверу з використанням (Express, MongoDB, Swagger, NoDemon, Parsers, aSync)
