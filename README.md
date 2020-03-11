@@ -1,7 +1,7 @@
 # inVeritaStudy
 Тестові завдання для підготовки до проекту та саморозвитку
 
-1️⃣ [Crud User](https://github.com/IRONKAGE/crud-users) [13-14.01.2020]
+1️⃣ [Crud User](https://github.com/IRONKAGE/crud-users) [13-22.01.2020]
 
 
 1️⃣  [Users-BackEnd-Express-Mongoose-Swagger](https://github.com/IRONKAGE/inVeritaStudy/tree/master/users-BackEnd-Express-Mongoose-Swagger)
