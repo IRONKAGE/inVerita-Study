@@ -33,4 +33,4 @@
 
 1️⃣4️⃣ [Test&Try - безліч різних проб і помилок](https://github.com/IRONKAGE/inVerita-Study/tree/master/Test%26Try)
 
-1️⃣5️⃣ [Красота мови JavaScript...](https://github.com/IRONKAGE/inVerita-Study/blob/master/baNaNa.js)
+1️⃣5️⃣  [Красота мови JavaScript...](https://github.com/IRONKAGE/inVerita-Study/blob/master/baNaNa.js)
